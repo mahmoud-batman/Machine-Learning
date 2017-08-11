@@ -71,13 +71,11 @@ def GetItemImage(url):
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Scraping the first 3 pages in souq.com and use the previous functions 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""    
-#url = "https://egypt.souq.com/eg-en/mobile-phone/l/?&sortby=sr&section=2&page=2"
-
+#print the title 
 print(Gettitle("https://egypt.souq.com/eg-en/mobile-phone/l/?sortby=sr&section=2&page=1"))
 
 m = 1
-
-for i in range(5):   
+for i in range(3):   
     url ="https://egypt.souq.com/eg-en/mobile-phone/l/?sortby=sr&section=2&page="+str(i+1)+""
     itemtitle = GetItemTitle(url)
 #    itemtitle2.extend(itemtitle)
@@ -86,7 +84,7 @@ for i in range(5):
     itemimgs = GetItemImage(url)
 #    itemimgs2.extend(itemimgs)
     itemlist = list(zip(itemtitle, itemprice, itemimgs))
-        
+    """ put the three lists in dataframe and changee it into excel sheet """    
     df = DataFrame({'itemtitle': itemtitle, 'itemprice': itemprice, 'itemimage': itemimgs})
 
     df.to_excel('E:\\WORK\\PROGRAMMER\\10)webCrawling\\souq.com\\Page'+str(i+1)+'.xlsx', 
@@ -94,10 +92,7 @@ for i in range(5):
                    index=False,
                    header=False
                    )
-        
-    
-    
-    
+    """ open each url in itemimgs list and write in into png file  """
     for img in itemimgs :
         imgurl = urlopen(img)
         output = open("E:\\WORK\\PROGRAMMER\\10)webCrawling\\souq.com\\img"+str(m)+".jpg","wb")
