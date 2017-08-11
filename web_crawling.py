@@ -71,12 +71,10 @@ def GetItemImage(url):
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Scraping the first 3 pages in souq.com and use the previous functions 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""    
-#url = "https://egypt.souq.com/eg-en/mobile-phone/l/?&sortby=sr&section=2&page=2"
-
+#print the title 
 print(Gettitle("https://egypt.souq.com/eg-en/mobile-phone/l/?sortby=sr&section=2&page=1"))
 
 m = 1
-
 for i in range(3):   
     url ="https://egypt.souq.com/eg-en/mobile-phone/l/?sortby=sr&section=2&page="+str(i+1)+""
     itemtitle = GetItemTitle(url)
@@ -87,24 +85,4 @@ for i in range(3):
 #    itemimgs2.extend(itemimgs)
     itemlist = list(zip(itemtitle, itemprice, itemimgs))
         
-    df = DataFrame({'itemtitle': itemtitle, 'itemprice': itemprice, 'itemimage': itemimgs})
-
-    df.to_excel('E:\\WORK\\PROGRAMMER\\10)webCrawling\\souq.com\\Page'+str(i+1)+'.xlsx', 
-                   sheet_name='sheet1', 
-                   index=False,
-                   header=False
-                   )
-        
-    
-    
-    
-    for img in itemimgs :
-        imgurl = urlopen(img)
-        output = open("E:\\WORK\\PROGRAMMER\\10)webCrawling\\souq.com\\img"+str(m)+".jpg","wb")
-        output.write(imgurl.read())
-        output.close()
-        m+=1
-    
-    
-    
-    
+    df = DataFrame({'itemtitle'
