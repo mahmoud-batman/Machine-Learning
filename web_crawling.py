@@ -77,7 +77,7 @@ print(Gettitle("https://egypt.souq.com/eg-en/mobile-phone/l/?sortby=sr&section=2
 
 m = 1
 
-for i in range(5):   
+for i in range(3):   
     url ="https://egypt.souq.com/eg-en/mobile-phone/l/?sortby=sr&section=2&page="+str(i+1)+""
     itemtitle = GetItemTitle(url)
 #    itemtitle2.extend(itemtitle)
