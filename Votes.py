@@ -1,6 +1,6 @@
 import random 
 
-lst = ["Omar","Mahmoud","Mosata","Ahmed","Yassin","Jone","zyad","walid"]
+lst = ["Omar","Mahmoud","Mostafa","Ahmed","Yassin","Jone","zyad","walid"]
 address = "E:\\WORK\\PROGRAMMER\\omr_tasks\\Votes\\"
 
 def random_names( lstOFNames ,address , lenOflst ):    
