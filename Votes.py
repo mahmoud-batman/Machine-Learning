@@ -1,9 +1,9 @@
 import random 
 
 lst = ["Omar","Mahmoud","Mosata","Ahmed","Yassin","Jone","zyad","walid"]
-
-def random_names( lstOFNames , lenOflst ):    
-    file = open("E:\\WORK\\PROGRAMMER\\omr_tasks\\Votes.txt" , 'a')
+address = "E:\\WORK\\PROGRAMMER\\omr_tasks\\"
+def random_names( lstOFNames ,address , lenOflst ):    
+    file = open("Votes.txt" , 'a')
     while lenOflst > 0 :
     
         print(lstOFNames[random.randint(0,(len(lstOFNames)-1))] + " " 
