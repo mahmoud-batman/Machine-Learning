@@ -13,6 +13,7 @@ def random_names( lstOFNames ,address , lenOflst ):
     while lenOflst > 0 :
         # we put random integer we get from random.randint in the list of names 
         # example : lstOfNames[0]  >> 'omar' , lstOfName[1] >> 'mahmoud'
+        # we select the random integer from 0 to the length of the list of names (0,(len(lstOFNames)-1))
         # so we get a random collection of names and write it in the text file  
         file.write(lstOFNames[random.randint(0,(len(lstOFNames)-1))] + " " 
                          + lstOFNames[random.randint(0,(len(lstOFNames)-1))] +"\n")
