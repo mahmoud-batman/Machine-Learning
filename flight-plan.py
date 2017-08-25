@@ -10,12 +10,7 @@ data_2014 = pd.read_csv("2014-summary.csv" , error_bad_lines=False)
 data_2015 = pd.read_csv("2015-summary.csv" , error_bad_lines=False)
 
 data = [data_2010 ,data_2011,data_2012,data_2013,data_2014,data_2015]
-"""
-data[1][data[1]["DEST_COUNTRY_NAME"] == "Gabon"][data[1]["ORIGIN_COUNTRY_NAME"] == "United States"]
-data[5][data[5]["DEST_COUNTRY_NAME"] == "United States"][data[5]["ORIGIN_COUNTRY_NAME"] == "Haiti"]
 
-data[1][data[1]["ORIGIN_COUNTRY_NAME"] == "Gabon"]
-"""
 """
 realation between countries annually 
 """
